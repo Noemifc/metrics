@@ -1,3 +1,11 @@
+""" 
+prova : 
+- fai tracking ogetto in movimento 
+- adattare a singola immagine + buffer 
+- no aggingere a metrics 
+
+
+""""
 
 
 ''' 
