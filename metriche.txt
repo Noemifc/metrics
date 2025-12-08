@@ -1,0 +1,53 @@
+Metriche esistenti:
+
+Shannon entropy
+
+Normalized entropy
+
+Zlib compressibility
+
+Laplacian variance (focus/sharpness)
+
+Spectral entropy
+
+Spectral centroid
+
+High-frequency energy
+
+Gradient magnitude
+
+Spectral flatness
+
+Mutual information (vs reference)
+
+Interest score (combinazione pesata)
+
+
+Manca
+
+
+micro-contrasto
+
+anisotropia delle strutture (fibre)
+
+presenza di bordi fini vs rumore
+
+
+
+qualità del fuoco su strutture non isotrope
+
+livelli di bleaching o drift
+
+
+Aggiunte
+
+ssim
+radiation damage
+SNR reale
+
+
+
+
+
+
+
