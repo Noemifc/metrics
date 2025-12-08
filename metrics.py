@@ -1,18 +1,28 @@
-def tenengrad_focus(img):
-    """Tenengrad focus measure using Sobel gradients."""
-    gx = sobel(img, axis=1)
+
+
+''' 
+misura di nitidezza basata sui gradienti
+'''
+
+def tenengrad_focus(img):      #restituisce un valore numerico che rappresenta la nitidezza
+ 
+    gx = sobel(img, axis=1)   # applica filtro sobel e individua i bordi 
     gy = sobel(img, axis=0)
-    G = gx**2 + gy**2
-    return float(np.mean(G))
+    G = gx**2 + gy**2         # energia del gradiente : amplifica la differenza tra immagini nitide e sfocate
+    return float(np.mean(G))  # media ai bordi: valore alto -> immagine a fuoco 
 
-
+'''
+brenner valuta la nitidezza dell’immagine controllando quanto cambiano i pixel lungo una direzione
+'''
 def brenner_focus(img):
-    """Brenner focus metric."""
-    return float(np.mean((img[:, 2:] - img[:, :-2])**2))
 
+    return float(np.mean((img[:, 2:] - img[:, :-2])**2)) # Diff a distanza di 2 pixel - quadrato - media - nitidezza
 
+'''
+valuta la densità dei bordi 
+'''
 def edge_density(img, threshold=0.1):
-    """Edge pixel ratio."""
+
     gx = sobel(img, axis=1)
     gy = sobel(img, axis=0)
     mag = np.sqrt(gx**2 + gy**2)
