@@ -130,4 +130,8 @@ def cnr_patch_based(img, patch_size=32):
     cnr = (signal_mean - background_mean) / (noise_std + 1e-8)
 
     return float(cnr)
+"""
+ binnig = finetra su FOV per triggereare monivemto tr 2 frame successivi , centri il quadrante con piu' 
 
+
+"""
